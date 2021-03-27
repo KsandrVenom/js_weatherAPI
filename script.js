@@ -1,7 +1,7 @@
 "use strict";
 
 
-fetch('http://api.openweathermap.org/data/2.5/weather?id=524894&appid=704b6e7b23d7eda6edef38028b60eead')
+fetch('https://api.openweathermap.org/data/2.5/weather?id=524894&appid=704b6e7b23d7eda6edef38028b60eead')
   .then(function (resp) { return resp.json() })
   .then(function (data) { 
     console.log(data);
@@ -20,7 +20,7 @@ let selectCity = document.querySelector('.select-city');
 selectCity.onchange = () => {
   let cityId = selectCity.value;
   
-  fetch(`http://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=704b6e7b23d7eda6edef38028b60eead`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=704b6e7b23d7eda6edef38028b60eead`)
   .then(function (resp) { return resp.json() })
   .then(function (data) { 
     
